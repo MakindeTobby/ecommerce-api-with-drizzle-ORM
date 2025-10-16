@@ -14,6 +14,9 @@ export async function getProducts(req: Request, res: Response) {
 
 export async function createProduct(req: Request, res: Response) {
   try {
+    console.log(req.userId);
+    // console.log(req.rol);
+
     const [product] = await db
       .insert(productsTable)
       .values(req.body)
@@ -25,8 +28,8 @@ export async function createProduct(req: Request, res: Response) {
 }
 
 export async function getProductsById(req: Request, res: Response) {
-  const { id } = req.params;
   try {
+    const { id } = req.params;
     const [product] = await db
       .select()
       .from(productsTable)

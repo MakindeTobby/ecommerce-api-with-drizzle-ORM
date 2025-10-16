@@ -8,6 +8,13 @@
       "when": 1760569165659,
       "tag": "0000_blue_black_knight",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1760649836544,
+      "tag": "0001_public_magneto",
+      "breakpoints": true
     }
   ]
 }

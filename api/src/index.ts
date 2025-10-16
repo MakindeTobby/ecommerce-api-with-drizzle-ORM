@@ -1,5 +1,6 @@
 import express, { urlencoded } from "express";
 import productRoutes from "./routes/products/index";
+import userRoutes from "./routes/auth/index";
 
 const app = express();
 app.use(urlencoded({ extended: false }));
@@ -11,6 +12,7 @@ app.get("/", (req, res) => {
   res.send("Hello Worlddd!");
 });
 
+app.use("/auth", userRoutes);
 app.use("/products", productRoutes);
 
 app.listen(PORT, () => {
